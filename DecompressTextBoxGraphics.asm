@@ -15,11 +15,16 @@ strh	r0,[r5]
 mov		r0,#1
 tst		r0,r4
 bne		GoBack
+bl    IsBattleDeamonActive
+ldr		r5,=TextBoxTypePointerTable		@defined in EA
+cmp   r0, #0x0
+beq   noBattle
+  ldr		r5,=BattleTextBoxTypePointerTable		@defined in EA
+noBattle:
 bl		GetCurrentSpeakerAttributesList
 ldrb	r0,[r0,#TextBoxTypeIdOffset]
 lsl		r0,#2
-ldr		r1,=TextBoxTypePointerTable		@defined in EA
-add		r0,r1
+add		r0,r5
 ldr		r0,[r0]
 lsr		r4,#1
 lsl		r4,#2

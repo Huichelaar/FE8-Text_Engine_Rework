@@ -60,7 +60,7 @@ POIN SpikyTextBoxGraphics
 //3 (Thought bubble)
 POIN ThoughtBoxGraphics
 
-NormalTextBoxGraphics:
+ALIGN 4; NormalTextBoxGraphics:
 POIN $9E8484
 POIN $9E8434
 POIN $9E83E0
@@ -69,19 +69,65 @@ POIN $9E82E0
 POIN $9E8238
 WORD 0
 
-SpikyTextBoxGraphics:
+ALIGN 4; SpikyTextBoxGraphics:
 POIN Spiky6
 WORD 0
 
-Spiky6:
+ALIGN 4; Spiky6:
 #incext Png2Dmp "Text_Box_Graphics/Spiky6.png" --lz77
 
-ThoughtBoxGraphics:
+ALIGN 4; ThoughtBoxGraphics:
 POIN Thinking6
 WORD 0
 
-Thinking6:
+ALIGN 4; Thinking6:
 #incext Png2Dmp "Text_Box_Graphics/Thinking6.png" --lz77
+
+// Battle textbox uses text palette, and therefore needs different graphics.
+ALIGN 4; BattleTextBoxTypePointerTable:
+//1 (Normal text box type)
+POIN BattleNormalTextBoxGraphics
+//2 (Angry/spiky text box)
+POIN BattleSpikyTextBoxGraphics
+//3 (Thought bubble)
+POIN BattleThoughtBoxGraphics
+
+ALIGN 4; BattleNormalTextBoxGraphics:
+POIN BattleNormal1
+POIN BattleNormal2
+POIN BattleNormal3
+POIN BattleNormal4
+POIN BattleNormal5
+POIN BattleNormal6
+WORD 0
+
+ALIGN 4; BattleNormal1:
+#incext Png2Dmp "Text_Box_Graphics/Battle/Default1.png" --lz77
+ALIGN 4; BattleNormal2:
+#incext Png2Dmp "Text_Box_Graphics/Battle/Default2.png" --lz77
+ALIGN 4; BattleNormal3:
+#incext Png2Dmp "Text_Box_Graphics/Battle/Default3.png" --lz77
+ALIGN 4; BattleNormal4:
+#incext Png2Dmp "Text_Box_Graphics/Battle/Default4.png" --lz77
+ALIGN 4; BattleNormal5:
+#incext Png2Dmp "Text_Box_Graphics/Battle/Default5.png" --lz77
+ALIGN 4; BattleNormal6:
+#incext Png2Dmp "Text_Box_Graphics/Battle/Default6.png" --lz77
+
+ALIGN 4; BattleSpikyTextBoxGraphics:
+POIN BattleSpiky6
+WORD 0
+
+ALIGN 4; BattleSpiky6:
+#incext Png2Dmp "Text_Box_Graphics/Battle/Spiky6.png" --lz77
+
+ALIGN 4; BattleThoughtBoxGraphics:
+POIN BattleThinking6
+WORD 0
+
+ALIGN 4; BattleThinking6:
+#incext Png2Dmp "Text_Box_Graphics/Battle/Thinking6.png" --lz77
+
 
 //########### TEXT BOOP PITCH ################
 ALIGN 4
