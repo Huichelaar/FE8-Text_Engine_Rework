@@ -7,7 +7,7 @@
 
 #include EAStdlib.event
 #include "Extensions/Hack Installation.txt"
-#include "Extensions/6CDefinitions.txt"
+#include "Extensions/ProcDefinitions.txt"
 
 #ifndef FreeSpace
 	#define FreeSpace 0xB2B000
@@ -89,9 +89,9 @@ PlayTextBoop:
 
 ALIGN 4
 gProc_DialogueBoxAppearingAnimation:
-_6C_CALL_ROUTINE(Copy_Text_Attributes|1)
-_6C_LOOP_ROUTINE(0x83F9)
-_6C_END
+PROC_CALL_ROUTINE(Copy_Text_Attributes|1)
+PROC_LOOP_ROUTINE(0x83F9)
+PROC_END
 
 ALIGN 4
 Copy_Text_Attributes:
