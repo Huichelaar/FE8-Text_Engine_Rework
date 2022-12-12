@@ -90,7 +90,7 @@ PlayTextBoop:
 ALIGN 4
 gProc_DialogueBoxAppearingAnimation:
 PROC_CALL_ROUTINE(Copy_Text_Attributes|1)
-PROC_LOOP_ROUTINE(BUB_ModifyCharEntries)    // Moved here from BattleDepth/src/chatBubble/chatBubble.event.
+PROC_LOOP_ROUTINE(0x83F9)
 PROC_END
 
 ALIGN 4
