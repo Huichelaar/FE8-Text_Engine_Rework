@@ -83,50 +83,50 @@ WORD 0
 ALIGN 4; Thinking6:
 #incext Png2Dmp "Text_Box_Graphics/Thinking6.png" --lz77
 
-// Battle textbox uses text palette, and therefore needs different graphics.
-ALIGN 4; BattleTextBoxTypePointerTable:
+// These use text-palette, for when you want to free up a BG layer.
+ALIGN 4; SingleBGTextBoxTypePointerTable:
 //1 (Normal text box type)
-POIN BattleNormalTextBoxGraphics
+POIN SingleBGNormalTextBoxGraphics
 //2 (Angry/spiky text box)
-POIN BattleSpikyTextBoxGraphics
+POIN SingleBGSpikyTextBoxGraphics
 //3 (Thought bubble)
-POIN BattleThoughtBoxGraphics
+POIN SingleBGThoughtBoxGraphics
 
-ALIGN 4; BattleNormalTextBoxGraphics:
-POIN BattleNormal1
-POIN BattleNormal2
-POIN BattleNormal3
-POIN BattleNormal4
-POIN BattleNormal5
-POIN BattleNormal6
+ALIGN 4; SingleBGNormalTextBoxGraphics:
+POIN SingleBGNormal1
+POIN SingleBGNormal2
+POIN SingleBGNormal3
+POIN SingleBGNormal4
+POIN SingleBGNormal5
+POIN SingleBGNormal6
 WORD 0
 
-ALIGN 4; BattleNormal1:
-#incext Png2Dmp "Text_Box_Graphics/Battle/Default1.png" --lz77
-ALIGN 4; BattleNormal2:
-#incext Png2Dmp "Text_Box_Graphics/Battle/Default2.png" --lz77
-ALIGN 4; BattleNormal3:
-#incext Png2Dmp "Text_Box_Graphics/Battle/Default3.png" --lz77
-ALIGN 4; BattleNormal4:
-#incext Png2Dmp "Text_Box_Graphics/Battle/Default4.png" --lz77
-ALIGN 4; BattleNormal5:
-#incext Png2Dmp "Text_Box_Graphics/Battle/Default5.png" --lz77
-ALIGN 4; BattleNormal6:
-#incext Png2Dmp "Text_Box_Graphics/Battle/Default6.png" --lz77
+ALIGN 4; SingleBGNormal1:
+#incext Png2Dmp "Text_Box_Graphics/SingleBG/Default1.png" --lz77
+ALIGN 4; SingleBGNormal2:
+#incext Png2Dmp "Text_Box_Graphics/SingleBG/Default2.png" --lz77
+ALIGN 4; SingleBGNormal3:
+#incext Png2Dmp "Text_Box_Graphics/SingleBG/Default3.png" --lz77
+ALIGN 4; SingleBGNormal4:
+#incext Png2Dmp "Text_Box_Graphics/SingleBG/Default4.png" --lz77
+ALIGN 4; SingleBGNormal5:
+#incext Png2Dmp "Text_Box_Graphics/SingleBG/Default5.png" --lz77
+ALIGN 4; SingleBGNormal6:
+#incext Png2Dmp "Text_Box_Graphics/SingleBG/Default6.png" --lz77
 
-ALIGN 4; BattleSpikyTextBoxGraphics:
-POIN BattleSpiky6
+ALIGN 4; SingleBGSpikyTextBoxGraphics:
+POIN SingleBGSpiky6
 WORD 0
 
-ALIGN 4; BattleSpiky6:
-#incext Png2Dmp "Text_Box_Graphics/Battle/Spiky6.png" --lz77
+ALIGN 4; SingleBGSpiky6:
+#incext Png2Dmp "Text_Box_Graphics/SingleBG/Spiky6.png" --lz77
 
-ALIGN 4; BattleThoughtBoxGraphics:
-POIN BattleThinking6
+ALIGN 4; SingleBGThoughtBoxGraphics:
+POIN SingleBGThinking6
 WORD 0
 
-ALIGN 4; BattleThinking6:
-#incext Png2Dmp "Text_Box_Graphics/Battle/Thinking6.png" --lz77
+ALIGN 4; SingleBGThinking6:
+#incext Png2Dmp "Text_Box_Graphics/SingleBG/Thinking6.png" --lz77
 
 
 //########### TEXT BOOP PITCH ################

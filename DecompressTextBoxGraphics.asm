@@ -15,12 +15,13 @@ strh	r0,[r5]
 mov		r0,#1
 tst		r0,r4
 bne		GoBack
-bl    IsBattleDeamonActive
+ldr   r0, =BUB_getSingleBGFlag
+bl    GOTO_R0
 ldr		r5,=TextBoxTypePointerTable		@defined in EA
 cmp   r0, #0x0
-beq   noBattle
-  ldr		r5,=BattleTextBoxTypePointerTable		@defined in EA
-noBattle:
+beq   noSingleBG
+  ldr		r5,=SingleBGTextBoxTypePointerTable		@defined in EA
+noSingleBG:
 bl		GetCurrentSpeakerAttributesList
 ldrb	r0,[r0,#TextBoxTypeIdOffset]
 lsl		r0,#2
@@ -44,6 +45,7 @@ bl		BreakProcLoop
 GoBack:
 pop		{r4-r6}
 pop		{r0}
+GOTO_R0:
 bx		r0
 
 .ltorg
