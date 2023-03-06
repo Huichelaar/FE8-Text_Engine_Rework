@@ -15,7 +15,7 @@ strh	r0,[r5]
 mov		r0,#1
 tst		r0,r4
 bne		GoBack
-ldr   r0, =BUB_getSingleBGFlag
+ldr   r0, =DEP_getDepthFlag
 bl    GOTO_R0
 ldr		r5,=TextBoxTypePointerTable		@defined in EA
 cmp   r0, #0x0
